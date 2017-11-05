@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,74 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MultiView_Controller" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1. BILDSCHIRM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4ek-sZ-sft">
+                                <rect key="frame" x="129" y="63" width="117" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H4R-O0-1yp">
+                                <rect key="frame" x="117" y="309" width="142" height="30"/>
+                                <state key="normal" title="Geh zu 2. Bildschirm"/>
+                                <connections>
+                                    <segue destination="Pc6-Dv-aOp" kind="show" id="w4B-k2-MVO"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="H4R-O0-1yp" firstAttribute="top" secondItem="4ek-sZ-sft" secondAttribute="bottom" constant="225" id="LS6-YJ-17D"/>
+                            <constraint firstItem="4ek-sZ-sft" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="d3J-6b-FdP"/>
+                            <constraint firstItem="4ek-sZ-sft" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="43" id="eHa-8i-gcc"/>
+                            <constraint firstItem="H4R-O0-1yp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nj6-9s-7gz"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="50" y="117"/>
+        </scene>
+        <!--Second View Controller-->
+        <scene sceneID="dJq-Hj-en2">
+            <objects>
+                <viewController id="Pc6-Dv-aOp" customClass="SecondViewController" customModule="MultiView_Controller" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mAh-Wb-oej">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2. BILDSCHIRM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KHf-JD-hkA">
+                                <rect key="frame" x="128" y="60" width="119" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x0z-SU-i1d">
+                                <rect key="frame" x="118" y="228" width="139" height="30"/>
+                                <state key="normal" title="Geh zu 1. Bildschirm"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="M8O-AH-pWV"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="KHf-JD-hkA" firstAttribute="centerX" secondItem="mAh-Wb-oej" secondAttribute="centerX" id="1v5-gS-2Ie"/>
+                            <constraint firstItem="x0z-SU-i1d" firstAttribute="centerX" secondItem="mAh-Wb-oej" secondAttribute="centerX" id="sy1-jZ-RPE"/>
+                            <constraint firstItem="KHf-JD-hkA" firstAttribute="top" secondItem="6MH-J8-aTK" secondAttribute="top" constant="40" id="tiJ-0V-6SN"/>
+                            <constraint firstItem="x0z-SU-i1d" firstAttribute="top" secondItem="KHf-JD-hkA" secondAttribute="bottom" constant="147" id="wTh-sc-NID"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6MH-J8-aTK"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tF9-C7-NTH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="873" y="118"/>
         </scene>
     </scenes>
 </document>

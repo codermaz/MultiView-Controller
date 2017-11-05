@@ -1,11 +1,9 @@
-//
-//  ViewController.swift
-//  MultiView Controller
-//
-//  Created by MacMini on 05.11.17.
-//  Copyright © 2017 MacMini. All rights reserved.
-//
-
+/*
+ 
+A>> von Object Library ViewController zu Storyboard
+ 
+ 
+ */
 import UIKit
 
 class ViewController: UIViewController {
@@ -13,6 +11,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        print ("bin auf Bildschirm 1")
     }
 
     override func didReceiveMemoryWarning() {
